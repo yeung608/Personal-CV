@@ -1,0 +1,36 @@
+body {
+  background-color: #79a3b1;
+}
+hr {
+  border-style: dotted;
+  border-bottom: none;
+  border-color: gray;
+  border-width: 5px;
+  width:5%;
+}
+}
+h1{
+  color: #66BFBF;
+}
+h2:hover{
+}
+h3{
+  color: #66BFBF;
+}
+h2{
+  color: #66BFBF;
+}
+.btn{
+  color: #66BFBF;
+}
+/*class styles*/
+.name-header{
+}
+
+/*ID styles*/
+
+.required {
+  color:red;
+  font-weight:bold
+}
+.human {margin: 0 0 0 12px}
