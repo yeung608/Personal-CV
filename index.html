@@ -66,7 +66,7 @@
   <script>
     $('#modal-button').on('click', function(e){
       e.preventDefault();
-       document.getElementById("theModal").innerHTML = document.getElementById("modal-button").getAttribute("href");
+      $('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
     });
   </script>
 
