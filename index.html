@@ -6,6 +6,9 @@
   <title>Alex's Personal Page</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,21 +17,20 @@
       <td><img src="Images\Alex Lourve Circle.png" alt="Image Did Not Load" style="width:200px;height:200px;margin-left:5px"></td>
       <td>
         <h1 class="name-header">Alex Yeung</h1>
-        <button id="modal-button" type="button" href="Contacts.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#theModal">Contact Me</button>
+        <a id="modal-button" href="Contacts.html" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#theModal">Contact Me</a>
 
         <p style="margin-top:20px; margin-left:5px"><em>Full Stack Engineer</em></p>
         <p style="margin-right:20px; margin-left:5px">
           Bio: Born in Hong Kong and raised in San Francisco. I've always been quite the contradiction when it comes to life. I hate doing something that others have already done yet I
-          don't like standing out. I find visiting big cities overwhelming yet I can't live too far from one without feeling isolated. I see the irony in everything but I'm no comedian. If you're kind
-          enough to have arrived here.
+          don't like standing out. I find visiting big cities overwhelming yet I can't live too far from one without feeling isolated. I see the irony in everything but I'm no comedian.
         </p>
         <a href="Hobbies.html">My Hobbies</a>
       </td>
     </tr>
   </table>
-  <div class="modal fade text-center" id="theModal">
+  <div class="modal fade text-center">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div id="theModal" class="modal-content">
       </div>
     </div>
   </div>
@@ -64,12 +66,10 @@
   <script>
     $('#modal-button').on('click', function(e){
       e.preventDefault();
-      $('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
+       document.getElementById("theModal").innerHTML = document.getElementById("modal-button").getAttribute("href");
     });
   </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
