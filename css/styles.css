@@ -8,15 +8,11 @@ hr {
   border-width: 5px;
   width:5%;
 }
-}
+
 h1{
-  color: #66BFBF;
+  color: black;
 }
-h2:hover{
-}
-h3{
-  color: #66BFBF;
-}
+
 h2{
   color: #66BFBF;
 }
@@ -29,8 +25,13 @@ h2{
 
 /*ID styles*/
 
-.required {
-  color:red;
-  font-weight:bold
-}
 .human {margin: 0 0 0 12px}
+.modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+}

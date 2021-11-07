@@ -28,36 +28,34 @@
       </td>
     </tr>
   </table>
-  <div class="modal fade text-right" id="theModal">
+  <div class="modal" id="theModal">
     <div class="modal-dialog">
       <div id="theModal" class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">X</button>
-          <h3>Contact Alex</h3>
+          <h3 class="modal-title">Contact Me</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
-        <form action="mailto:a.yeung608@yahoo.com" method="post" enctype="text/plain">
-          <div class="form-group">
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="name" name="name" placeholder="First & Last" required>
+          <form action="mailto:a.yeung608@yahoo.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last" required>
+              </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@domain.com" required>
+
             </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-9">
-              <input type="email" class="form-control" id="email" name="email" placeholder="you@domain.com" required>
+            <div class="form-group">
+                <textarea name="message" rows="4" required class="form-control" id="message" placeholder="Message"></textarea>
+
             </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-9">
-              <textarea name="message" rows="4" required class="form-control" id="message" placeholder="Message"></textarea>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+
             </div>
-          </div>
-          <div class="form-group">
-              <button type="submit" id="submit" name="submit" class="btn btn-primary btn-sm">Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -69,7 +67,7 @@
 
   <h2 style="margin-right:10px">Skills</h2>
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-start">
       <div class="col-float-end">
         QuickBase
       </div>
