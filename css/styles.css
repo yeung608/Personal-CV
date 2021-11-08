@@ -1,5 +1,5 @@
 body {
-  background-image: url("/Images/Hawaii.png");
+  background-image: url("../Images/Hawaii.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #d6f7fe
