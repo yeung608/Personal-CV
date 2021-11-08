@@ -9,6 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -38,23 +39,23 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="https://formsubmit.co/a.yeung608@yahoo.com" method="post" enctype="text/plain">
+          <form method="post" enctype="text/plain">
             <input type="hidden" name="_subject" value="Submission From Personal CV">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://yeung608.github.io/Personal-CV/">
             <div class="form-group">
-                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last" required>
-              </div>
+              <input type="text" class="form-control" id="name" name="name" placeholder="First & Last" required>
+            </div>
             <div class="form-group">
-                <input type="email" class="form-control" id="email" name="email" placeholder="you@domain.com" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@domain.com" required>
 
             </div>
             <div class="form-group">
-                <textarea name="message" rows="4" required class="form-control" name="message" placeholder="Message"></textarea>
+              <textarea rows="4" required class="form-control" id="message" name="message" placeholder="Message"></textarea>
 
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="sendEmail()">Submit</button>
 
             </div>
           </form>
@@ -91,7 +92,19 @@
       </div>
     </div>
   </div>
-
+  <script>
+    function sendEmail() {
+      Email.send({
+        SecureToken :"97029755-c2ee-4c80-b98d-db73f5a595e2",
+        To: 'a.yeung608@yahoo.com',
+        From: document.getElementById("email").value,
+        Subject: "New Message from Personal CV",
+        Body: document.getElementById("name").value +"\n"+document.getElementById("message").value,
+      }).then(
+        message => alert("mail sent successfully")
+      );
+    }
+  </script>
 
 </body>
 
