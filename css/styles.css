@@ -1,7 +1,6 @@
 body {
-  background-image: url("Personal-CV/Images/Hawaii.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url("..Images/Hawaii.png");
+  background-color: #d6f7fe
 }
 hr {
   border-style: dotted;
