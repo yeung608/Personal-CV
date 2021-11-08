@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://github.com/yeung608/privateInfo/blob/main/index.js"></script>
 </head>
 
 <body>
@@ -41,6 +42,8 @@
         <div class="modal-body">
           <form method="post" enctype="text/plain">
             <input type="hidden" name="_subject" value="Submission From Personal CV">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="">
             <div class="form-group">
               <input type="text" class="form-control" id="name" name="name" placeholder="First & Last" required>
             </div>
@@ -90,19 +93,6 @@
       </div>
     </div>
   </div>
-  <script>
-    function sendEmail() {
-      Email.send({
-        SecureToken :"97029755-c2ee-4c80-b98d-db73f5a595e2",
-        To: 'a.yeung608@yahoo.com',
-        From:'deadlysage@gmail.com' ,
-        Subject: "New Message from Personal CV",
-        Body: document.getElementById("name").value +"\n"+document.getElementById("email").value+"\n"+document.getElementById("message").value,
-      }).then(
-        message => alert("mail sent successfully")
-      );
-    }
-  </script>
 
 </body>
 
