@@ -52,7 +52,7 @@
 
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary" onclick="sendEmail()">Submit</button>
+              <button id="saveButton" type="button" class="btn btn-primary" onclick="sendEmail()">Submit</button>
 
             </div>
           </form>
@@ -92,16 +92,16 @@
   <script>
     function sendEmail() {
       Email.send({
-        SecureToken: "cdd7a3a0-fd5e-42de-8ba9-d6004538e05c",
-        // Elastic Email Password: B054BD9294FE0A33E3BAA086A17531F1FA37
-        // API Key: A3CAF7F138F7C82FE678A0B13D37500E94B641E4AB1931E8C5C49B385E224C983353A53F56F909EE9158E16537F9C986
+        SecureToken: "72893361-a71d-4490-ba53-a930e32adac6",
         To: 'a.yeung608@yahoo.com',
-        From: 'deadlysage@gmail.com',
-        Subject: "New Message from Personal CV",
-        Body: document.getElementById("name").value + "\n" + document.getElementById("email").value + "\n" + document.getElementById("message").value
-      }).then(
-         message => alert("mail sent")
-      );
+        From: document.getElementById("email").value,
+        Subject: "New Message from " + document.getElementById("name").value,
+        Body: document.getElementById("message").value
+      }).then((message) => {
+        alert(message)
+        $('#theModal').modal('hide')
+        return;
+      })
     }
   </script>
 </body>
